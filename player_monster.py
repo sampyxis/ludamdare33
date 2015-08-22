@@ -20,6 +20,8 @@ class PlayerMonster(pygame.sprite.Sprite):
         self.change_x = 0
         self.change_y = 0
 
+        self.direction = global_vars.player_direction
+
     def change_speed(self, x, y):
         # change the speed of the player`
         self.change_x += x
@@ -27,5 +29,9 @@ class PlayerMonster(pygame.sprite.Sprite):
 
     def update(self):
         # update the players positon
-        self.rect.x = self.change_x
+        self.rect.x =  self.change_x
+        self.rect.y = self.change_y
+
+    def update_location(self):
+        self.rect.x =  self.change_x
         self.rect.y = self.change_y

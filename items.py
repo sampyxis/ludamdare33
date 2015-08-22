@@ -8,10 +8,21 @@ import global_vars
 class Items(pygame.sprite.Sprite):
     def __init__(self, color):
         super().__init__()
-        self.image = pygame.Surface(global_vars.player_size)
+
+        self.image = pygame.Surface([20,20])
         self.image.fill(color)
 
-        self.rect = self.image.get_image()
+        self.rect = self.image.get_rect()
+
+        self.world_shift = 0
+
+    def shift_world(self, shift_x, shift_y):
+        """ When the user moves left/right and we need to scroll
+        everything: """
+
+        # Keep track of the shift amount
+        self.world_shift += shift_x
+
 
 class Blocky(pygame.sprite.Sprite):
     def __init__(self, color): # a block can be various colors
@@ -22,9 +33,9 @@ class Blocky(pygame.sprite.Sprite):
 
         self.rect = self.image.get_image()
 
-class Block(pygame.sprite.Sprite):
+class Block(Items):
     def __init__(self, color):
-        super().__init__()
+        super().__init__(color)
 
         self.image = pygame.Surface([20,20])
         self.image.fill(color)

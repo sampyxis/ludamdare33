@@ -10,16 +10,10 @@ def init():
     global DARKGREY
     global GREY
     global PINK
-    global OPEN_DOOR
 
     global player_size
     global player_color
     global player_direction
-
-    global up
-    global down
-    global left
-    global right
 
     BLACK = (0, 0, 0)
     WHITE = (255, 255, 255)
@@ -35,8 +29,3 @@ def init():
     player_color = RED
 
     player_direction = 0
-
-    up = 0
-    down = 1
-    left = 2
-    right = 3

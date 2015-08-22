@@ -1,5 +1,6 @@
 # Took this code from here:
 # Class to produce random map layouts
+
 from random import *
 from math import *
 
@@ -20,10 +21,11 @@ class dMap:
            tmp = []
            for x in range(xsize):
                tmp.append(1)
-           self.mapArr.append( tmp )
+           self.mapArr.append( tmp ) # map is all ones
 
        w,l,t=self.makeRoom()
        while len(self.roomList)==0:
+           #print('in roomList', self.roomList)
            y=randrange(ysize-1-l)+1
            x=randrange(xsize-1-w)+1
            p=self.placeRoom(l,w,x,y,xsize,ysize,6,0)
@@ -58,8 +60,8 @@ class dMap:
    def makeRoom(self):
        """Randomly produce room size"""
        rtype=5
-       rwide=randrange(12)+3
-       rlong=randrange(12)+3
+       rwide=randrange(18)+3
+       rlong=randrange(18)+3
        return rwide,rlong,rtype
 
    def makeCorridor(self):

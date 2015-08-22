@@ -1,6 +1,12 @@
+To do:
+Generate better dungeon -
+Put in center of screen
+Put player in center (open space)
+Scroll (subclass the blocks and such to items)
+
 Ok - theme announced:
 
-##You are the monstor!
+##You are the monster!
 
 So, changing my idea now.
 

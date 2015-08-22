@@ -11,7 +11,6 @@ class PlayerMonster(pygame.sprite.Sprite):
         self.image.fill(global_vars.player_color)
 
         self.rect = self.image.get_rect()
-        print('here?')
 
         self.health = 100
         self.strength = 100
@@ -22,8 +21,7 @@ class PlayerMonster(pygame.sprite.Sprite):
         self.change_y = 0
 
     def change_speed(self, x, y):
-        # change the speed of the player
-        print('in change speed: ', x, ' ', y)
+        # change the speed of the player`
         self.change_x += x
         self.change_y += y
 

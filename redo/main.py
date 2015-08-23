@@ -1,6 +1,6 @@
 import pygame
 import global_vars
-from create_level import create_level
+from create_level import Map
 
 global_vars.init()
 
@@ -18,7 +18,7 @@ all_block_list = pygame.sprite.Group()
 all_actor_list = pygame.sprite.Group()
 
 clock = pygame.time.Clock()
-create_level()
+map = Map("map")
 
 while not done:
 
